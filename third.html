@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input id="first-input" type="number" placeholder="First number">
+    <input id="second-input" type="number" placeholder="second number">
+    <button id="btn-add">
+        Add
+    </button>
+    <button id="btn-sub">
+        Sub
+    </button>
+      <button id="btn-mul">
+        Mul
+    </button>
+
+      <button id="btn-div">
+        Div
+    </button>
+
+    <h1 id="result"></h1>
+    <script>
+        const firstInput = document.getElementById("first-input");
+        const secondInput = document.getElementById("second-input");
+        const btnAdd = document.getElementById("btn-add");
+        const btnSub = document.getElementById("btn-sub");
+        const btnMul = document.getElementById("btn-mul");
+        const btnDiv = document.getElementById("btn-div");
+        const result = document.getElementById("result");
+
+        btnAdd.addEventListener("click", () => {
+            const myResult = parseFloat(firstInput.value)  + parseFloat(secondInput.value) ;
+            result.innerText = myResult;
+        });
+
+        
+        btnSub.addEventListener("click", () => {
+            const myResult = parseFloat(firstInput.value)  - parseFloat(secondInput.value) ;
+            result.innerText = myResult;
+        });
+
+        
+        btnMul.addEventListener("click", () => {
+            const myResult = parseFloat(firstInput.value)  * parseFloat(secondInput.value) ;
+            result.innerText = myResult;
+        });
+
+        
+        btnDiv.addEventListener("click", () => {
+            const myResult = parseFloat(firstInput.value)  / parseFloat(secondInput.value) ;
+            result.innerText = myResult;
+        });
+    </script>
+</body>
+</html>

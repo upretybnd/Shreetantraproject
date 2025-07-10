@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .alert {
+            padding: 10px 20px;
+            color: white;
+            width: 100px;
+            margin:  10px 20px;
+        }
+
+        .alert-danger {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <input id="input-sec" type="number" placeholder="enter input in second">
+
+    <div id="content"></div>
+    <button id="btn">Click me</button>
+<script>
+
+const inputSec = document.getElementById("input-sec");
+const content = document.getElementById("content");
+const btn = document.getElementById("btn");
+
+btn.addEventListener("click", () => {
+    
+    console.log(inputSec.value);
+
+        setTimeout(() => {
+            // content.innerText = "Hurry up ! wake up";
+            const div = document.createElement("div");
+            div.className = "alert alert-danger";
+            div.innerText = "Please wakeup !!";
+            content.appendChild(div);
+
+            setTimeout(() => {
+                div.remove();
+            },2000)
+            console.log(content);
+        }, inputSec.value*1000);      
+})
+
+  </script>
+</body>
+</html>
